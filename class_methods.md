@@ -1,4 +1,4 @@
-Oczywiście! Oto kilka przykładów metod klasowych w Pythonie:
+Oto kilka przykładów metod klasowych w Pythonie:
 
 1. Metoda klasowa do parsowania daty z tekstu:
 
