@@ -1,4 +1,4 @@
-Oczywiście! Oto kilka przykładów użycia metod statycznych w Pythonie:
+Oto kilka przykładów użycia metod statycznych w Pythonie:
 
 1. Metoda statyczna do obliczania wieku na podstawie daty urodzenia:
 
