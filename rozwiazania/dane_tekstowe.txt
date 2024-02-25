@@ -1,0 +1,3 @@
+To jest przykładowy plik tekstowy.
+Zawiera on różne linie tekstu,
+które mogą być użyte do testowania funkcji związanych z obsługą plików tekstowych.
