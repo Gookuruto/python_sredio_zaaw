@@ -1,4 +1,13 @@
 import csv
+from dataclasses import dataclass
+
+
+@dataclass
+class Person:
+    name: str
+    surname: str
+    age: int
+
 
 # Zadanie 1: Zapisanie danych do pliku CSV
 dane = [
@@ -15,7 +24,7 @@ wczytane_dane = []
 with open('dane.csv', 'r') as plik:
     reader = csv.reader(plik)
     for wiersz in reader:
-        wczytane_dane.append(wiersz)
+        wczytane_dane.append(Person(wiersz[0], wiersz[1], wiersz[2]))
 print("Zadanie 2:", wczytane_dane)
 
 # Zadanie 3: Aktualizacja danych w pliku CSV
@@ -25,10 +34,12 @@ with open('dane.csv', 'w', newline='') as plik:
     writer = csv.writer(plik)
     writer.writerows(wczytane_dane)
 
+
 # Zadanie 4: Obsługa różnych typów danych
 class PrzykladowaKlasa:
     def __init__(self, nazwa):
         self.nazwa = nazwa
+
 
 obiekt = PrzykladowaKlasa("Przykład")
 # Zapis niestandardowej klasy do pliku CSV

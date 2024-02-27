@@ -11,3 +11,4 @@ class TimerContextManager:
 # Przykład użycia:
 with TimerContextManager():
     time.sleep(1)
+    x = [i for i in range(int(10e10))]

@@ -27,6 +27,10 @@ class PrzykladowaKlasa:
 obiekt = PrzykladowaKlasa("Przykład")
 # Serializacja niestandardowej klasy
 obiekt_serializowany = json.dumps(obiekt.__dict__)
+
+deserializowany = json.loads(obiekt_serializowany)
+deserializowany = PrzykladowaKlasa(**deserializowany)
+print(deserializowany)
 print("Zadanie 4:", obiekt_serializowany)
 
 # Zadanie 5: Konwersja danych z/do innego formatu

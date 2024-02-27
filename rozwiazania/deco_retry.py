@@ -24,4 +24,14 @@ def example_function():
     else:
         return "Success"
 
-print(example_function())  # Może spróbować ponownie wywołać funkcję w przypadku błędu
+#print(example_function())  # Może spróbować ponownie wywołać funkcję w przypadku błędu
+
+
+def loop_function():
+    for i in range(10):
+        yield i
+
+generator = loop_function()
+
+for i in generator:
+    print(i)
