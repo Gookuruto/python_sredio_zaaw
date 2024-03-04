@@ -30,3 +30,6 @@ def simple_generator(limit):
 generator = simple_generator(5)
 for item in generator:
     print(item, end=" ")  # Output: 0 1 2 3 4
+
+
+
