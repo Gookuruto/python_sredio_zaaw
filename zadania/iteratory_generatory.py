@@ -1,0 +1,64 @@
+'''
+Iteratory:
+    -Ćwiczenie 1: Sumowanie elementów listy
+Stwórz iterator, który będzie sumował elementy z danej listy.
+
+Ćwiczenie 2: Wypisywanie indeksów listy
+Stwórz iterator, który będzie wypisywał indeksy elementów danej listy.
+
+
+Generatory:
+Ćwiczenie 1: Generowanie liczb parzystych
+Stwórz generator, który będzie generował kolejne liczby parzyste.
+
+Ćwiczenie 2: Generowanie ciągu Fibonacciego
+Stwórz generator, który będzie generował kolejne liczby w ciągu Fibonacciego.
+
+'''
+
+
+#Interator 1
+class ListSumIterator:
+    def __init__(self, lst):
+        self.lst = lst
+        self.index = 0
+
+numbers = [1, 2, 3, 4, 5]
+iterator = ListSumIterator(numbers)
+sum_of_numbers = sum(iterator)
+print(sum_of_numbers)  # Output: 15
+
+#iterator 2
+
+class ListIndexIterator:
+    def __init__(self, lst):
+        self.lst = lst
+        self.index = 0
+
+# Użycie iteratora
+letters = ['a', 'b', 'c', 'd', 'e']
+iterator = ListIndexIterator(letters)
+for index in iterator:
+    print(index, end=" ")  # Output: 0 1 2 3 4
+
+
+#Generatory 1:
+
+def even_numbers_generator():
+    pass
+
+# Użycie generatora
+generator = even_numbers_generator()
+for _ in range(5):
+    print(next(generator), end=" ")  # Output: 0 2 4 6 8
+
+
+#Genaratory 2:
+
+def fibonacci_generator():
+    pass
+
+# Użycie generatora
+generator = fibonacci_generator()
+for _ in range(10):
+    print(next(generator), end=" ")  # Output: 0 1 1 2 3 5 8 13 21 34

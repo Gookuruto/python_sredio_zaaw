@@ -5,6 +5,8 @@ with open("example.txt", "r") as file:
     content = file.read()
     print(content)
 
+file.read()
+
 
 # import os
 #
@@ -19,12 +21,12 @@ with open("example.txt", "r") as file:
 # print("Back to original directory:", os.getcwd())
 
 
-import sqlite3
-
-# Przy użyciu menedżera kontekstu nie musimy ręcznie zamykać połączenia z bazą danych.
-
-with sqlite3.connect("example.db") as conn:
-    cursor = conn.cursor()
-    cursor.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)")
+# import sqlite3
+#
+# # Przy użyciu menedżera kontekstu nie musimy ręcznie zamykać połączenia z bazą danych.
+#
+# with sqlite3.connect("example.db") as conn:
+#     cursor = conn.cursor()
+#     cursor.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)")
 
 # Po wyjściu z bloku with połączenie z bazą danych zostanie automatycznie zamknięte.
