@@ -17,23 +17,51 @@ Stwórz generator, który będzie generował kolejne liczby w ciągu Fibonaccieg
 '''
 
 
-#Interator 1
+# Interator 1
 class ListSumIterator:
     def __init__(self, lst):
         self.lst = lst
         self.index = 0
+        self.sum = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index < len(self.lst):
+            self.sum += self.lst[self.index]
+            self.index += 1
+            return self.sum
+        else:
+            raise StopIteration
+
 
 numbers = [1, 2, 3, 4, 5]
 iterator = ListSumIterator(numbers)
-sum_of_numbers = sum(iterator)
-print(sum_of_numbers)  # Output: 15
+suma = sum(iterator)
+print(suma)
+for i in iterator:
+    print(i, end=" ")  # 1,3,6,10,15
 
-#iterator 2
+
+# iterator 2
 
 class ListIndexIterator:
     def __init__(self, lst):
         self.lst = lst
         self.index = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index < len(self.lst):
+            temp_index = self.index
+            self.index += 1
+            return temp_index
+        else:
+            raise StopIteration
+
 
 # Użycie iteratora
 letters = ['a', 'b', 'c', 'd', 'e']
@@ -42,10 +70,11 @@ for index in iterator:
     print(index, end=" ")  # Output: 0 1 2 3 4
 
 
-#Generatory 1:
+# Generatory 1:
 
 def even_numbers_generator():
     pass
+
 
 # Użycie generatora
 generator = even_numbers_generator()
@@ -53,10 +82,11 @@ for _ in range(5):
     print(next(generator), end=" ")  # Output: 0 2 4 6 8
 
 
-#Genaratory 2:
+# Genaratory 2:
 
 def fibonacci_generator():
     pass
+
 
 # Użycie generatora
 generator = fibonacci_generator()

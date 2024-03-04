@@ -54,3 +54,14 @@ print(f"Produkt o najniższej cenie: {min_price_element}")
 
 max_price_element = max(products, key=lambda x: x["price"])
 print(f"Produkt o najwyższej cenie: {max_price_element}")
+
+
+def gcd(a, b):
+    smaller = min(a, b)
+
+    for i in range(1, smaller + 1):
+        if a % i == 0 and b % i == 0:
+            gcd = i
+    return gcd
+
+print(f"Wspolny dzielnik = {gcd(12,18)}")
